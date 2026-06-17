@@ -1,60 +1,43 @@
-AI-Powered SLA Breach Predictor
-
-Objective
-
-Built an AI-powered ticket risk scoring system that analyzes open support tickets and predicts which ones are going to breach SLA before it happens. Rather than reacting after a breach occurs, this tool gives ops and CS teams time to intervene — surfacing the right tickets, the right reasoning, and the right next steps automatically.
-Built using Python and the Claude API, the system scores every ticket based on SLA consumption, assignee workload, and update staleness, then uses AI to generate plain-English explanations and an executive summary of overall operational health.
-
-What It Does
-
-
-Ingests open ticket data and scores each ticket for breach risk
-Flags at-risk tickets above a configurable risk threshold
-Calls the Claude API to explain why each ticket is at risk and what action to take
-Generates an end-of-run executive summary identifying overloaded assignees, high-risk categories, and recommended actions
-Outputs a full operational risk report in the terminal
-
-
-Skills Demonstrated
-
-
-AI Integration: Connecting to and prompting the Claude API to generate contextual, actionable output from structured data.
-Risk Scoring Logic: Designing a weighted algorithm that combines multiple signals into a single risk score.
-Python Development: End-to-end scripting including CSV ingestion, data processing, API calls, and formatted reporting.
-Operational Thinking: Translating a real ops problem (SLA breaches) into a working technical solution.
-Prompt Engineering: Writing prompts that produce consistent, specific, and useful AI output per ticket and for the overall summary.
-
-
-Tools Used
-
-
-Python: Core scripting and data processing.
-Claude API (Haiku): AI-generated explanations and executive summary.
-Zendesk-style ticket data: Simulated ticket dataset representing a real support queue.
-
-
-Outcome
-
-
-Flags at-risk tickets before breach occurs, giving teams time to act.
-Generates plain-English AI reasoning for each flagged ticket — no dashboard interpretation needed.
-Produces an executive summary that identifies the biggest risk areas across the full queue.
-Reduces reactive firefighting by turning ticket data into a forward-looking risk report.
-
-
-Note
-
-Ticket data used in this project is simulated. This tool is designed to connect to any CRM or ticketing system (Zendesk, ServiceNow, Jira) that can export ticket data — the scoring and AI layer sits on top of whatever the data source is.
-
-Steps
-
-Risk Scoring — Each ticket is scored using three signals: how much of the SLA window has been consumed, how many open tickets the assignee is carrying, and how long since the last update. These combine into a single risk score between 0 and 1. Any ticket above 0.75 is flagged.
-
-
-AI Ticket Analysis — For every flagged ticket, the tool calls the Claude API with the ticket details and risk score. Claude returns a 2-3 sentence explanation of why the ticket is at risk and what action to take. This is the part a rule-based system cannot do — it reasons about the combination of signals, not just a threshold.
-
-
-Executive Summary — After all flagged tickets are analyzed, the tool sends an aggregated summary to Claude covering total tickets scanned, at-risk count, assignee breakdown, and category breakdown. Claude returns a 3-4 sentence operational summary with the biggest risk areas and recommended immediate actions.
-
-
-Sample Output — [Video walkthrough coming soon]
+# AI-Powered SLA Breach Predictor
+## Objective
+Built a tool that predicts SLA breaches before they happen. It pulls open ticket data, scores each ticket for risk, and uses AI to explain what is going wrong and what to do about it so teams can get ahead of problems instead of cleaning them up after the fact.
+ 
+Built using Python and the Claude API, the scoring weighs SLA consumption, assignee workload, and how long since the last update. The AI layer turns that data into plain-English analysis at the ticket level and a full operational summary at the end.
+## What It Does
+1.	Reads open ticket data and scores every ticket for breach risk
+2.	Flags anything above the risk threshold before it actually breaches
+3.	Calls the Claude API to explain why each flagged ticket is at risk and what action to take
+4.	Produces an executive summary at the end covering overloaded assignees, high-risk categories, and next steps
+5.	Outputs a full risk report directly in the terminal
+### Skills Learned
+-	AI Integration: Connecting to the Claude API and prompting it to return useful, specific output from structured ticket data.
+-	Risk Scoring: Building a weighted algorithm that combines multiple signals into a single score.
+-	Python Development: Scripting CSV ingestion, data processing, API calls, and formatted terminal output end to end.
+- Operational Problem Solving: Taking a real workflow problem and turning it into a working technical tool.
+- Prompt Engineering: Writing prompts that produce consistent, actionable AI output at both the ticket and summary level.
+### Tools Used
+- Python: Core scripting and data processing.
+- Claude API (Haiku): Ticket-level explanations and end-of-run executive summary.
+- Zendesk-style ticket data: Simulated dataset built to represent a real support queue.
+### Outcome
+- Catches at-risk tickets before they breach, giving teams time to actually do something about it.
+- Replaces manual ticket reviews with an automated risk report that runs in seconds.
+- Gives every flagged ticket a plain-English explanation with no interpreting charts or dashboards required.
+- Produces an executive summary that tells a manager exactly where to focus and what to do next.
+## All automations built independently. Ticket data is simulated and based on real workflows from my current role but contains no proprietary employer data.
+## Steps
+Risk Scoring - Three signals go into each ticket's score: how much of the SLA window is used up, how many open tickets the assignee is carrying, and how long it has been since the last update. Those combine into a score from 0 to 1. Anything above 0.75 gets flagged.
+ 
+-------------------------------------------------------------------------------------------------
+AI Ticket Analysis - Every flagged ticket gets sent to the Claude API with its full details and risk score. Claude comes back with a 2-3 sentence explanation of what is driving the risk and what action to take. A rule-based system can flag a ticket. It cannot tell you why it is actually going to breach.
+ 
+<img width="654" height="525" alt="Sample ticket analysis output" src="https://github.com/user-attachments/assets/fbfdc0ee-0b64-4920-b230-3f3b00e1add6" />
+-------------------------------------------------------------------------------------------------
+Executive Summary - After all flagged tickets are analyzed, the tool sends an aggregated picture to Claude: total tickets, at-risk count, assignee breakdown, category breakdown. Claude returns a 3-4 sentence summary with the biggest risk areas and what to do about them right now.
+ 
+<img width="857" height="591" alt="Sample executive summary output" src="https://github.com/user-attachments/assets/77bee370-e8d3-47e9-9b46-6fb1bc44dcbf" />
+-------------------------------------------------------------------------------------------------
+Full Report Output - The terminal report shows every at-risk ticket with its score, assignee load, SLA consumption, and AI analysis, followed by on-track tickets and the executive summary at the bottom.
+ 
+-------------------------------------------------------------------------------------------------
+Demo - [Video walkthrough coming soon]
