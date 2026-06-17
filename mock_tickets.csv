@@ -1,0 +1,31 @@
+ticket_id,created_at,category,priority,assignee,status,sla_hours,age_hours,assignee_open_tickets,last_update_hours
+T001,2026-06-09 08:00,Network Issue,High,Sarah Chen,In Progress,24,21,8,10
+T002,2026-06-10 09:30,Access Request,Low,Mike Torres,Open,72,60,3,48
+T003,2026-06-11 14:00,Hardware Failure,Critical,Sarah Chen,In Progress,8,7,8,5
+T004,2026-06-12 10:00,Software Bug,Medium,James Park,Open,48,40,6,30
+T005,2026-06-13 08:00,Security Alert,Critical,Lisa Wong,In Progress,4,3,2,1
+T006,2026-06-09 11:00,Access Request,Medium,Mike Torres,Open,48,65,3,50
+T007,2026-06-10 13:00,Network Issue,High,James Park,In Progress,24,35,6,20
+T008,2026-06-11 09:00,Hardware Failure,High,David Kim,Open,24,22,9,18
+T009,2026-06-12 15:00,Software Bug,Low,Sarah Chen,Open,72,30,8,25
+T010,2026-06-13 10:00,Security Alert,High,Lisa Wong,In Progress,12,11,2,8
+T011,2026-06-09 07:00,Network Issue,Critical,David Kim,In Progress,8,9,9,6
+T012,2026-06-10 16:00,Access Request,Low,Mike Torres,Open,72,55,3,52
+T013,2026-06-11 08:00,Software Bug,High,James Park,In Progress,24,20,6,15
+T014,2026-06-12 09:00,Hardware Failure,Medium,Sarah Chen,Open,48,38,8,35
+T015,2026-06-13 14:00,Security Alert,Critical,Lisa Wong,Open,4,3.5,2,3
+T016,2026-06-09 10:00,Access Request,High,David Kim,In Progress,24,68,9,40
+T017,2026-06-10 08:00,Network Issue,Medium,James Park,Open,48,44,6,42
+T018,2026-06-11 13:00,Software Bug,Critical,Sarah Chen,In Progress,8,7.5,8,4
+T019,2026-06-12 11:00,Hardware Failure,Low,Mike Torres,Open,72,28,3,20
+T020,2026-06-13 09:00,Security Alert,High,David Kim,Open,12,10,9,9
+T021,2026-06-09 15:00,Network Issue,High,Lisa Wong,In Progress,24,18,2,12
+T022,2026-06-10 10:00,Access Request,Medium,James Park,Open,48,36,6,30
+T023,2026-06-11 11:00,Software Bug,High,David Kim,In Progress,24,23,9,16
+T024,2026-06-12 08:00,Hardware Failure,Critical,Lisa Wong,Open,8,8.5,2,7
+T025,2026-06-13 12:00,Security Alert,Medium,Mike Torres,Open,48,15,3,10
+T026,2026-06-09 09:00,Access Request,Critical,Sarah Chen,In Progress,8,10,8,5
+T027,2026-06-10 14:00,Network Issue,Low,David Kim,Open,72,50,9,45
+T028,2026-06-11 10:00,Software Bug,Medium,James Park,Open,48,42,6,38
+T029,2026-06-12 13:00,Hardware Failure,High,Mike Torres,In Progress,24,22,3,18
+T030,2026-06-13 07:00,Security Alert,Critical,Sarah Chen,Open,4,4.2,8,3
