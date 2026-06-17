@@ -3,6 +3,9 @@
 Built a tool that predicts SLA breaches before they happen. It pulls open ticket data, scores each ticket for risk, and uses AI to explain what is going wrong and what to do about it so teams can get ahead of problems instead of cleaning them up after the fact.
  
 Built using Python and the Claude API, the scoring weighs SLA consumption, assignee workload, and how long since the last update. The AI layer turns that data into plain-English analysis at the ticket level and a full operational summary at the end.
+
+> **Note:** The API key referenced in this project has been deactivated. To run this locally, replace `YOUR_API_KEY_HERE` in `sla_predictor.py` with your own Claude API key from console.anthropic.com.
+
 ## What It Does
 1.	Reads open ticket data and scores every ticket for breach risk
 2.	Flags anything above the risk threshold before it actually breaches
