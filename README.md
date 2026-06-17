@@ -31,7 +31,8 @@ Risk Scoring - Three signals go into each ticket's score: how much of the SLA wi
 -------------------------------------------------------------------------------------------------
 AI Ticket Analysis - Every flagged ticket gets sent to the Claude API with its full details and risk score. Claude comes back with a 2-3 sentence explanation of what is driving the risk and what action to take. A rule-based system can flag a ticket. It cannot tell you why it is actually going to breach.
  
-<img width="654" height="525" alt="Sample ticket analysis output" src="https://github.com/user-attachments/assets/fbfdc0ee-0b64-4920-b230-3f3b00e1add6" />
+<img width="1033" height="592" alt="Screenshot 2026-06-17 at 6 19 36 PM" src="https://github.com/user-attachments/assets/524943b2-78d4-4300-b6b4-31d67825479c" />
+
 -------------------------------------------------------------------------------------------------
 Executive Summary - After all flagged tickets are analyzed, the tool sends an aggregated picture to Claude: total tickets, at-risk count, assignee breakdown, category breakdown. Claude returns a 3-4 sentence summary with the biggest risk areas and what to do about them right now.
  
@@ -40,4 +41,6 @@ Executive Summary - After all flagged tickets are analyzed, the tool sends an ag
 Full Report Output - The terminal report shows every at-risk ticket with its score, assignee load, SLA consumption, and AI analysis, followed by on-track tickets and the executive summary at the bottom.
  
 -------------------------------------------------------------------------------------------------
-Demo - [Video walkthrough coming soon]
+Demo - https://github.com/user-attachments/assets/bc7aba9c-7754-4dbd-aff5-f3a5b0e306cf
+
+
