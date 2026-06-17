@@ -47,6 +47,6 @@ The scoring logic weighs three signals per ticket: how much of the SLA window is
 
  
 -------------------------------------------------------------------------------------------------
-Demo - https://github.com/user-attachments/assets/bc7aba9c-7754-4dbd-aff5-f3a5b0e306cf
+Demo - [![SLA Breach Predictor Demo](https://img.youtube.com/vi/PAlvik8sW00/0.jpg)](https://www.youtube.com/watch?v=PAlvik8sW00)
 
 
